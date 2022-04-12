@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.228">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>t22201 - 3&nbsp; Nacimientos en mujeres madres menores de 19 años en pandemia</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+
+  <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+  <script src="site_libs/quarto-nav/headroom.min.js"></script>
+  <script src="site_libs/clipboard/clipboard.min.js"></script>
+  <meta name="quarto:offset" content="./">
+  <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+  <script src="site_libs/quarto-search/fuse.min.js"></script>
+  <script src="site_libs/quarto-search/quarto-search.js"></script>
+  <link href="./04-leanna.html" rel="next">
+  <link href="./02-diego.html" rel="prev">
+  <script src="site_libs/quarto-html/quarto.js"></script>
+  <script src="site_libs/quarto-html/popper.min.js"></script>
+  <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="site_libs/quarto-html/anchor.min.js"></script>
+  <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="site_libs/bootstrap/bootstrap.min.js"></script>
+  <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <script id="quarto-search-options" type="application/json">{
+    "location": "sidebar",
+    "copy-button": false,
+    "collapse-after": 3,
+    "panel-placement": "start",
+    "type": "textbox",
+    "limit": 20,
+    "language": {
+      "search-no-results-text": "Sín resultados",
+      "search-matching-documents-text": "documentos encontrados",
+      "search-copy-link-title": "Copiar el enlace en la busqueda",
+      "search-hide-matches-text": "Esconder resultados adicionales",
+      "search-more-match-text": "hay más resultados en este documento",
+      "search-more-matches-text": "más resultados en este documento",
+      "search-clear-button-title": "Borrar",
+      "search-detached-cancel-button-title": "Cancelar",
+      "search-submit-button-title": "Eviar"
+    }
+  }</script>
+  <link href="site_libs/tabwid-1.0.0/tabwid.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body class="floating">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nacimientos en mujeres madres menores de 19 años en pandemia</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">t22201</a> 
+        <div class="sidebar-tools-main">
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+            <i class="bi bi-bi-facebook pe-1"></i>
+          Facebook
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Presentación</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-sumillas.html" class="sidebar-item-text sidebar-link">Sobre los autores</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-kevin.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">La evolución en la identificación de la Tuberculosis en el Perú</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-diego.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Élites parlamentarias</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-laila.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nacimientos en mujeres madres menores de 19 años en pandemia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-leanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">¿Qué rostro tiene la educación superior completa en el Perú?</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Indice de contenidos</h2>
+<ul>
+<li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">3.1</span> Introducción</a></li>
+<li><a href="#paquetes-usados" id="toc-paquetes-usados" class="nav-link" data-scroll-target="#paquetes-usados"> <span class="header-section-number">3.2</span> Paquetes usados</a></li>
+<li><a href="#conjuntos-de-datos-usados" id="toc-conjuntos-de-datos-usados" class="nav-link" data-scroll-target="#conjuntos-de-datos-usados"> <span class="header-section-number">3.3</span> Conjuntos de datos usados</a></li>
+<li><a href="#funciones-creadas" id="toc-funciones-creadas" class="nav-link" data-scroll-target="#funciones-creadas"> <span class="header-section-number">3.4</span> Funciones creadas</a></li>
+<li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados"> <span class="header-section-number">3.5</span> Resultados</a></li>
+<li><a href="#conclusiones" id="toc-conclusiones" class="nav-link" data-scroll-target="#conclusiones"> <span class="header-section-number">3.6</span> Conclusiones</a></li>
+</ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nacimientos en mujeres madres menores de 19 años en pandemia</span></h1></div></header>
+
+<p><em>Laila Villavicencio</em></p>
+<section id="introducción" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">3.1</span> Introducción</h2>
+<p>Ante el contexto de la pandemia de la COVID-19 los estados priorizaron sus recursos en tratar esta pandemia de índole desconocida. Tal es así que el aislamiento fue la primera medida decretada por la mayoría de los países y el Perú no fue la excepción. Cuando el 16 de marzo entró en vigencia el estado de emergencia y el aislamiento social obligatorio, centro y postas de salud suspendieron las consultas externas. Entre las diferentes consecuencias que generó dicha suspensión la provisión de insumos de planificación familiar fue una de ellas. Además de otros insumos y servicios de salud sexual y reproductiva, incluidos aquellos relacionados con la salud menstrual. El grado de afectación de la cadena de suministros de estos servicios ha sido diferenciado por factores económicos, sociales, cultura y de género.</p>
+<p>Ante esta realidad frente a la pandemia surge la Directiva Sanitaria N° 094 - Directiva sanitaria para garantizar la salud de las gestantes y la continuidad de la atención en planificación familiar ante la infección por COVID-19. La misma que tenía como finalidad establecer las disposiciones para realizar las actividades de atención de la salud materna relacionadas con las prestaciones que contribuyen a la prevención, reducción y manejo de los casos de gestantes y puérperas sospechosas o infectadas por el COVID-19 y para mantener la continuidad de la provisión de métodos anticonceptivos a la población que lo requiera. La directiva generó algunas disposiciones en ese contexto. Algunas de ellas: 1. Garantizar continuidad de los servicios de salud y el suministro ininterrumpido de los insumos de salud sexual y reproductiva, incluyendo los métodos anticonceptivos para el ejercicios de los derechos sexuales y reproductivos.</p>
+<ol start="2" type="1">
+<li><p>Todos los establecimientos de salud deben garantizar la Protección a las mujeres gestantes de los riesgos vinculados a la propagación del COVID-9. Incluyendo la provisión de visitas domiciliares, parto y puerperio con énfasis en gestantes de alto riesgo y en especial con enfermedades respiratorias.</p></li>
+<li><p>Se debe ofertar todos los métodos anticonceptivos en lo servicios de urgencia y emergencia de todos los establecimientos de salud a fin de garantizar la continuidad de los mismos y la atención de la prevención del embarazo no deseado mediante la entrega de AOE.</p></li>
+<li><p>Todos los establecimientos de salud deben asegurar la debida disponibilidad de todos los métodos anticonceptivos.</p></li>
+</ol>
+<p>Sin embargo la realidad fue distinta y la defensoría del pueblo a través de sus notas de prensa N°459/0CII/DP/2020 expresaba su preocupación por la mala praxis en los centros de salud vinculada a víctimas de violencia sexual a menores de edad. De igual manera, algunos medios independientes como Wayka en los meses de mayo, junio del 2020 daban cuentan de adolescentes fallecidas por no ser atendidas en centros de salud o la falta de cobertura de madres embarazadas en los centros médicos.</p>
+<p>Otro aspecto que se desarrolló en durante el aislamiento obligario fue que entre enero a diciembre del 2020 a través de los Centro de Emergencia Mujer se registraron 131 casos de víctimas de feminicidio y 330 casos de tentativa de feminicidios.</p>
+<p>En la Comisión de la Mujer y Familia del Congreso de la República en su sesión del 12 de mayo del 2020 el Ministerio de Mujer reportaron 171 casos de violen cia sexual contra niñas, niños y adolescentes menos de 18 años.</p>
+<p>En ese sentido, la finalidad de este trabajo busca identificar por años la cantidad de nacimientos producidos por mujeres menores de 19 años y ver así si ha disminuido o aumentado. Para ello se está teniendo en cuenta los años del 2016 al 2021 y como fuente principal el Sistema de Registro de Certificado de Nacido Vivo en Línea, del Ministerio de Salud el cual es un sistema web que involucra a dis grandes instituciones: El MINSA y el Registro Nacional de Identiad y Estado Civil - RENIEC</p>
+</section>
+<section id="paquetes-usados" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="paquetes-usados"><span class="header-section-number">3.2</span> Paquetes usados</h2>
+<p>el conjunto de paquetes usados es la instalación de library (tidyverse) lo cual nos permite construir gráficos estadísticos que pueden ser creados por la función ggplot. También se uso el parque readxl que permite leer y manejar data en formato xls</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="conjuntos-de-datos-usados" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="conjuntos-de-datos-usados"><span class="header-section-number">3.3</span> Conjuntos de datos usados</h2>
+<p>Para la construción de los gráficos estadisticos se ha creado la siguiente función para obtener grafícos de barras. La finalidad de estas gráficas permiten ordenar de manera resuminda la data por años y por grupos etáreos. Los años abarcan del 2016 al 2021 y los grupos estáreos son: datos_general que abarca los nacimientos por madres de 0a 19 años de edad, el primer grupo etáreo es de nacimientos por niñas de 0 a 10 años bajo la codificación: datos_0_10, el segundo grupo etáreo es de 11 a 14 años con el código datos_11_14 y el último grupo etáreo es de 15 a 19 años con la codificación de datos_15_19. Es así que el conjunto de datos permite ordenar los años y los grupos etáreos vinculados a los nacimientos ocurridos del 2016 al 2021 por mujeres entre 0 a 19 años. La fuente principal data obtenida del Sistema de Certificado de Nacido vivo del Ministerio de Salud.</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>importar_datos <span class="ot">&lt;-</span> <span class="cf">function</span>(hoja) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_excel</span>(<span class="st">"data/DatosMadre- General.xls"</span>, <span class="at">sheet =</span> hoja, <span class="at">skip =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename</span>(<span class="at">region =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">!</span><span class="fu">starts_with</span>(<span class="st">"..."</span>), <span class="sc">!</span><span class="fu">matches</span>(<span class="st">"Grand Total"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_longer</span>(<span class="st">`</span><span class="at">2021</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">2016</span><span class="st">`</span>, <span class="at">names_to =</span> <span class="st">"anio"</span>, <span class="at">values_to =</span> <span class="st">"casos"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># filter(region == "Grand Total")</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="fu">str_detect</span>(<span class="fu">str_to_upper</span>(region), <span class="st">"TOTAL"</span>))</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">"data/DatosMadre- General.xls"</span>, <span class="at">sheet =</span> <span class="dv">1</span>, <span class="at">skip =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename</span>(<span class="at">region =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">!</span><span class="fu">starts_with</span>(<span class="st">"..."</span>), <span class="sc">-</span><span class="st">`</span><span class="at">Grand Total</span><span class="st">`</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_longer</span>(<span class="st">`</span><span class="at">2021</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">2016</span><span class="st">`</span>, <span class="at">names_to =</span> <span class="st">"anio"</span>, <span class="at">values_to =</span> <span class="st">"casos"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="fu">str_detect</span>(<span class="fu">str_to_upper</span>(region), <span class="st">"TOTAL"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-c68f6d36{table-layout:auto;width:0%;}.cl-c68952a2{font-family:'Arial';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-c68952a3{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-c68979c6{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-c68979c7{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-c689a0c2{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 1pt solid rgba(102, 102, 102, 1.00);border-right: 1pt solid rgba(102, 102, 102, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-c689a0c3{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 1pt solid rgba(102, 102, 102, 1.00);border-right: 1pt solid rgba(102, 102, 102, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-c689a0c4{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(102, 102, 102, 1.00);border-top: 1pt solid rgba(102, 102, 102, 1.00);border-left: 1pt solid rgba(102, 102, 102, 1.00);border-right: 1pt solid rgba(102, 102, 102, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-c689a0c5{background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(102, 102, 102, 1.00);border-top: 1pt solid rgba(102, 102, 102, 1.00);border-left: 1pt solid rgba(102, 102, 102, 1.00);border-right: 1pt solid rgba(102, 102, 102, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-c68f6d36">
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a2">region</span></p></td><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a2">anio</span></p></td><td class="cl-c689a0c4"><p class="cl-c68979c7"><span class="cl-c68952a2">casos</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-c689a0c2"><p class="cl-c68979c6"><span class="cl-c68952a3">TOTAL POR AÑOS</span></p></td><td class="cl-c689a0c2"><p class="cl-c68979c6"><span class="cl-c68952a3">2021</span></p></td><td class="cl-c689a0c3"><p class="cl-c68979c7"><span class="cl-c68952a3">49,532.00</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">TOTAL POR AÑOS</span></p></td><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">2020</span></p></td><td class="cl-c689a0c4"><p class="cl-c68979c7"><span class="cl-c68952a3">48,578.00</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">TOTAL POR AÑOS</span></p></td><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">2019</span></p></td><td class="cl-c689a0c4"><p class="cl-c68979c7"><span class="cl-c68952a3">53,308.00</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">TOTAL POR AÑOS</span></p></td><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">2018</span></p></td><td class="cl-c689a0c4"><p class="cl-c68979c7"><span class="cl-c68952a3">57,636.00</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">TOTAL POR AÑOS</span></p></td><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">2017</span></p></td><td class="cl-c689a0c4"><p class="cl-c68979c7"><span class="cl-c68952a3">58,846.00</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">TOTAL POR AÑOS</span></p></td><td class="cl-c689a0c5"><p class="cl-c68979c6"><span class="cl-c68952a3">2016</span></p></td><td class="cl-c689a0c4"><p class="cl-c68979c7"><span class="cl-c68952a3">56,813.00</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>datos_general <span class="ot">&lt;-</span> <span class="fu">importar_datos</span>(<span class="at">hoja =</span> <span class="dv">1</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>datos_0_10 <span class="ot">&lt;-</span> <span class="fu">importar_datos</span>(<span class="at">hoja =</span> <span class="dv">2</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>datos_11_14 <span class="ot">&lt;-</span> <span class="fu">importar_datos</span>(<span class="at">hoja =</span> <span class="dv">3</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>datos_15_19 <span class="ot">&lt;-</span> <span class="fu">importar_datos</span>(<span class="at">hoja =</span> <span class="dv">4</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="funciones-creadas" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="funciones-creadas"><span class="header-section-number">3.4</span> Funciones creadas</h2>
+<p>La función creada para responder ¿cuántos nacimientos se han producido por mujeres menores de edad durante los años 2016 al 2021? se ha utilizado ggplot y aes como atributos estétitcos para la creación de la figura geométrica relacionado a la forma y tamaño de las barras a nuestra data.</p>
+<p>l ::: {.cell}</p>
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>graficar_nacimientos <span class="ot">&lt;-</span> <span class="cf">function</span>(datos) { </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  datos <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(anio, casos)) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label</span>(<span class="fu">aes</span>(<span class="at">label =</span> casos))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<p>:::</p>
+</section>
+<section id="resultados" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="resultados"><span class="header-section-number">3.5</span> Resultados</h2>
+<p>Ante la pregunta sobre ¿Cómo ha sido la evolución de los nacimientos reportados por mujeres de 0 a 19 años según el Sistema de Registro de Certificado de Nacido Vivo en Línea? se uso el bloque de código:</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_nacimientos</span>(<span class="at">datos =</span> datos_general)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="03-laila_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>En el presente gráfico abarca la totalidad de nacimientos ocurridos desde el 2016 al 2021 por parte de mujeres menores de 0 a 19 años. En el cual se evidencia una ligera dismunición en el año 2020 donde la restricciones vinculados a la pandemia del covid 19 fueron más estrictas. En ese sentido en el 2016 las mujeres menores de 0 a 19 años produjeron un total de 56813 nacimientos ese año y desde entonces el crecimiento no es lineal, al contro es ambivalente. En el 2019 los nacimiento fueron 53308 el último año previo a la pandemia. Sin embargo en el 2020 los nacimientos fueron 48578 y para el 2021 hay un aumento de 954 nacimiento respectivamente. Esto nos lleva a la hipótesis sobre la ligera disminución de nacimientos en el 2020 y es propiamente los decesos por covid a nivel nacional.</p>
+<p>Ante la pregunta ¿Cómo ha sido la evolución de los nacimientos reportados por mujeres de 0 a 10 años según el Sistema de Registro de Certificado de Nacido Vivo en Línea? el bloque de código fue:</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_nacimientos</span>(<span class="at">datos =</span> datos_0_10)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="03-laila_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>En el gráfico que se presenta registra los nacimiento de niñas de 0 a 10 años de edad desde el 2016 hasta el 2021. En comparación con el gráfico general el año 2020 donde las restricciónes respecto a la pandemia son más estricticas se ve un incremento muy significado en años anteriores. Es así que el año 2020 se han producido 22 nacimientos por niñas prtenecientes al grupo etareo de 0 a 10 años y es el número más alto en comparación con el 2016 con 4 nacimientos, 2017 y 2028 5 nacimiento y en tan solo un año de diferencia entre el 2019 y 2020 fueron 13 nacimientos producidos por niñas de 0 a 10 años.</p>
+<p>Ante la pregunta de ¿Cómo ha sido la evolución de los nacimientos reportados por mujeres de 11 a 14 años según el Sistema de Registro de Certificado de Nacido Vivo en Línea? se utilizó el siguiente bloque de código:</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_nacimientos</span>(<span class="at">datos =</span> datos_11_14)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="03-laila_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>El gráfico representa a los nacimientos producidos por madres del grupo etareo de 11 a 14 años. En ese sentido la evolución demuestra que en pese a una ligera dismunición entre el 2019 y 2020 de 139 nacimientos menos para el 2021 la cifra de nacimientos de incrementa en 274 nacimientos, cifra que es incluso mayor a los años 2016, 2017 y 2018 donde la totalidad de nacimientos fue de 1412 y para el 2021 la cifra total es de 1429.</p>
+<p>Finalmente ante la pregunta de ¿Cómo ha sido la evolución de los nacimientos reportados por mujeres de 15 a 19 años según el Sistema de Registro de Certificado de Nacido Vivo en Línea? el bloque de códigos fue:</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">graficar_nacimientos</span>(<span class="at">datos =</span> datos_15_19)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="03-laila_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>En este gráfico se representa el grupo de estario de mujeres de 15 a 19 años de edad. A través de él la línea de crecimiento es desproporcional se puede evidenciar que en el 2016 los nacimientos fueron de un total de de 55636 el mismo que para el 2017 aumento en 1886 nacimientos y para el 2018 dismunución en comparación al 2017 en 1303. Sin embargo en el último año de no pandemía el total de nacimientos fue 52005 y éste tuvo una dismunción en el 2020 de 47401. Sin embargo, para el 2021 la cifra total empieza a incrementarse.</p>
+</section>
+<section id="conclusiones" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="conclusiones"><span class="header-section-number">3.6</span> Conclusiones</h2>
+<p>A raíz de todo lo desarrollado y encontrado se concluye en lo siguiente: - Los nacimientos producidos por mujeres entre 0 a 19 años presenta un ligero decrecimiento en el 2020. Sin embargo en el 2021 se evidencia que la cifra comienza a incrementarse. Además desde el 2016 al 2021 la totalidad de los nacimientos ocurridos no arroja un dato constante al contrario es muy fluctuante.</p>
+<ul>
+<li><p>Respecto a los nacimientos ocurridos por mujeres del grupo etáreo de 0 a 10 años es sumamente preocupante, puesto que desde desde el 2016 al 2021 el mayor incremento de nacimientos se produce en el 2020. La vinculación con los grupos etáreos de niñas de 11 a 14 años y de 15 a 19 demuestra una problematica social y políticas. Asu vez un problema de salud pública puuestpo que al ser menos de edad los embarazos y por ende los nacimientos no se producen en el marco del interés superior del niño principio rector de la Convención Sobre los Derechos del Niño (1989). En la misma línea, en el resumen ejecutivo de la campaña Son niñas no madres (Mayo, 2021) demuestra que las tasas de embarazos adolescentes son alarmantes y mucho más los partos en niñas y adolescentes.</p></li>
+<li><p>Las consecuencias de embarazos en niñas y adolescentes de acuerdo a PROMSEX (2020) van desde la muerte materna, impactos en la salud, abandono escoclar y perpetuación de la pobreza.</p></li>
+</ul>
+<p>Finalmente los nacimientos ocurridos durante el 2016 al 2021 en mujeres menores de edad se infiere que son producto de violaciones sexuales y la no aplicación del Protocolo de acción conjunta entre los Centros de Emergencia Mujer y los Establecimientos de Salud.</p>
+
+
+
+</section>
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-diego.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Élites parlamentarias</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04-leanna.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">¿Qué rostro tiene la educación superior completa en el Perú?</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+</body></html>

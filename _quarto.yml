@@ -1,0 +1,39 @@
+project:
+  type: book
+  output-dir: docs
+
+lang: "es"
+
+book:
+  title: "t22201"
+  author: "Samuel Calderon"
+  date: "11/4/2022"
+  chapters:
+    - "index.qmd"
+    # - "00-intro.qmd"
+    - "00-sumillas.qmd"
+    - "01-kevin.qmd"
+    - "02-diego.qmd"
+    - "03-laila.qmd"
+    - "04-leanna.qmd"
+    - references.qmd
+  search: true
+  sharing: [twitter, facebook]
+
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: minty
+    echo: true
+    warning: false
+    message: false
+    comment: "#>"
+    code-fold: true
+    code-summary: "Mostrar código"
+  # pdf:
+  #   documentclass: scrreprt
+
+
+

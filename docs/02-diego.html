@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.228">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>t22201 - 2&nbsp; Élites parlamentarias</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+
+  <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+  <script src="site_libs/quarto-nav/headroom.min.js"></script>
+  <script src="site_libs/clipboard/clipboard.min.js"></script>
+  <meta name="quarto:offset" content="./">
+  <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+  <script src="site_libs/quarto-search/fuse.min.js"></script>
+  <script src="site_libs/quarto-search/quarto-search.js"></script>
+  <link href="./03-laila.html" rel="next">
+  <link href="./01-kevin.html" rel="prev">
+  <script src="site_libs/quarto-html/quarto.js"></script>
+  <script src="site_libs/quarto-html/popper.min.js"></script>
+  <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="site_libs/quarto-html/anchor.min.js"></script>
+  <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="site_libs/bootstrap/bootstrap.min.js"></script>
+  <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <script id="quarto-search-options" type="application/json">{
+    "location": "sidebar",
+    "copy-button": false,
+    "collapse-after": 3,
+    "panel-placement": "start",
+    "type": "textbox",
+    "limit": 20,
+    "language": {
+      "search-no-results-text": "Sín resultados",
+      "search-matching-documents-text": "documentos encontrados",
+      "search-copy-link-title": "Copiar el enlace en la busqueda",
+      "search-hide-matches-text": "Esconder resultados adicionales",
+      "search-more-match-text": "hay más resultados en este documento",
+      "search-more-matches-text": "más resultados en este documento",
+      "search-clear-button-title": "Borrar",
+      "search-detached-cancel-button-title": "Cancelar",
+      "search-submit-button-title": "Eviar"
+    }
+  }</script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body class="floating">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Élites parlamentarias</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">t22201</a> 
+        <div class="sidebar-tools-main">
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+            <i class="bi bi-bi-facebook pe-1"></i>
+          Facebook
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Presentación</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-sumillas.html" class="sidebar-item-text sidebar-link">Sobre los autores</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-kevin.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">La evolución en la identificación de la Tuberculosis en el Perú</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-diego.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Élites parlamentarias</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-laila.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nacimientos en mujeres madres menores de 19 años en pandemia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-leanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">¿Qué rostro tiene la educación superior completa en el Perú?</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Indice de contenidos</h2>
+<ul>
+<li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">2.1</span> Introducción</a></li>
+<li><a href="#paquetes-usados" id="toc-paquetes-usados" class="nav-link" data-scroll-target="#paquetes-usados"> <span class="header-section-number">2.2</span> Paquetes usados</a></li>
+<li><a href="#conjuntos-de-datos-usados" id="toc-conjuntos-de-datos-usados" class="nav-link" data-scroll-target="#conjuntos-de-datos-usados"> <span class="header-section-number">2.3</span> Conjuntos de datos usados</a></li>
+<li><a href="#funciones-creadas" id="toc-funciones-creadas" class="nav-link" data-scroll-target="#funciones-creadas"> <span class="header-section-number">2.4</span> Funciones creadas</a></li>
+<li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados"> <span class="header-section-number">2.5</span> Resultados</a></li>
+<li><a href="#conclusiones" id="toc-conclusiones" class="nav-link" data-scroll-target="#conclusiones"> <span class="header-section-number">2.6</span> Conclusiones</a></li>
+</ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Élites parlamentarias</span></h1></div></header>
+
+<p><em>Diego Sánchez</em></p>
+<section id="introducción" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">2.1</span> Introducción</h2>
+<p>Que el Congreso de la República sea una de las instituciones más odiadas por la ciudadanía ya no es una novedad. De acuerdo a datos del Barómetro de las Américas, entre los años 2006 y 2019 el porcentaje de peruanos y peruanas que manifestó confiar en esta institución pasó del 32.6% a 20.9%. Esta última cifra no solo representa un mínimo histórico desde que se empezó a realizar la ronda de encuestas del Barómetro sino que también nos sitúa en los últimos lugares a nivel regional (Carrión et al., 2020).</p>
+<p>No resulta demasiado arriesgado hipotetizar que una parte importante del desprestigio que ha ido ganado el Congreso a lo largo de los últimos años se explicaría por el pobre desempeño que muestran las diversas bancadas congresales en las diversas funciones que esta institución realiza. Casi a diario, la prensa muestra situaciones como proyectos de ley presentados por los congresitas cuentan con serios conflictos de interés o que, cada cierto tiempo, descaradas “repartijas” a la hora de nombrar altos funcionarios en puestos como la Defensoría del Pueblo o el Tribunal Constitucional o diverso tipo de “blindajes” a diversos miembros del parlamento con serios procesos judiciales.</p>
+<p>Con el fin de contribuir a comprender el bajo desempeño del Congreso en el desarrollo de sus funciones, el presente trabajo apunta a identificar las características de la trayectoria laboral de los congresistas. Más específicamente, se apuntará a responder las siguientes interrogantes con respecto a sus respectivas trayectorias laborales: 1) ¿Cuentan con experiencia política previa?; 2) ¿Qué nivel nivel educativo cuentan?; 3) ¿A qué tipo de universidad acudieron?; 4) ¿Qué tipo de carreras profesionales han estudiado?; 5) ¿En qué sectores se han desempeñado laboralmente?; 6) ¿En qué tipo de organizaciones han participado?.</p>
+</section>
+<section id="paquetes-usados" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="paquetes-usados"><span class="header-section-number">2.2</span> Paquetes usados</h2>
+<p>Con el objetivo de trabajar los datos seleccionados para este trabajo, se utilizaron dos paquetes: readxl y la colección de paquetes tidyverse. El primer paquete permite la lectura de archivos con extensión .xlsx. Esta extensión pertenece al programa Office Excel y es el formato de documento en el que se encuentra disponible la data con la que se trabajó. Por su parte, el segundo paquete nos permite desarrollar la limpieza de los datos, así como ejecutar funciones que ayudan con la organización, el filtrado y la selección de variables relevantes. Otro aporte de este paquete es que permite presentar la información extraída de la data a través de gráficos que pueden ser creados con la función ggplot.</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="conjuntos-de-datos-usados" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="conjuntos-de-datos-usados"><span class="header-section-number">2.3</span> Conjuntos de datos usados</h2>
+<p>Este trabajo empleó una base de datos orginal formulada en conjunto por los investigadores Artthur Morenas, Mauricio Rentería y Diego Sánchez. la cual sistematiza los datos de las hojas de vida de los 130 congresistas electos para el período 2016-2020 y que se encuentran disponibles en la plataforma INFOGOB del Jurado Nacional de Elecciones (https://infogob.jne.gob.pe/). La base de datos incluye las siguientes variables acerca de los siguientes aspectos de la trayectoria laboral de los congresistas:</p>
+<ol type="1">
+<li>Membresías anteriores a otras organizaciones políticas</li>
+<li>Experiencia previa en cargos electivos a nivel nacional o subnacional</li>
+<li>Edad</li>
+<li>Lugar de nacimiento</li>
+<li>Residencia</li>
+<li>Sector en el que se desempeñaron dentro del sector privado y público</li>
+<li>Organizaciones sociales a las que pertenecen</li>
+<li>Nivel educativo</li>
+<li>Tipo de colegio al que acudieron</li>
+<li>Tipo de universidad de pregrado</li>
+<li>Tipo de universidad de posgrado</li>
+<li>Carrera de estudios</li>
+<li>Ingresos</li>
+</ol>
+<p>En conjunto esas variables nos permitirán responder las siguientes preguntas:</p>
+<ol type="1">
+<li>¿Cuentan con experiencia política previa?</li>
+<li>¿Qué nivel nivel educativo cuentan?</li>
+<li>¿A qué tipo de universidad acudieron?</li>
+<li>¿Qué tipo de carreras profesionales han estudiado?</li>
+<li>¿En qué sectores se han desempeñado laboralmente?</li>
+<li>¿En qué tipo de organizaciones han participado?</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_congreso <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/Base de datos Congreso de la Republica_Variables de muestra.xlsx"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="funciones-creadas" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="funciones-creadas"><span class="header-section-number">2.4</span> Funciones creadas</h2>
+<p>Se ha creado la función “graficar_variable” la cual realiza las siguientes operaciones. En primer lugar, crea una tabla de frecuencias de las categorías de la variable de interés especificada. Luego, convierte dichas frecuencias en porcentajes. En segundo lugar, crea un gráfico de barras a partir de la tabla de frecuencias creada anteriormente. Adicionalmente, crea etiquetas en cada una de las barras en la que se especifica el porcentaje exacto que representa cada barra. En tercer lugar, la función muestra el gráfico creado a partir de la tabla inicialmente elaborada.</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>graficar_variable <span class="ot">&lt;-</span> <span class="cf">function</span> (mi_variable) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="do">##Hacer tabla</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  mi_tabla <span class="ot">&lt;-</span> data_congreso <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>({{mi_variable}}) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">recuento =</span> <span class="fu">n</span>()</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">porcentaje =</span> <span class="fu">round</span>(recuento<span class="sc">/</span><span class="fu">sum</span>(recuento)<span class="sc">*</span><span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="do">##Hacer gráfico</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  mi_grafico <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mi_tabla, <span class="fu">aes</span>(porcentaje, {{mi_variable}})) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_label</span>(<span class="fu">aes</span>(<span class="at">label =</span> porcentaje))</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="do">##Llamar gráfico</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  mi_grafico</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="resultados" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="resultados"><span class="header-section-number">2.5</span> Resultados</h2>
+<p>A continuación se van a presentar 08 gráficos de barras que permitirán responder las 06 preguntas de investigación planteadas en la introducción de este documento. Cada gráfico será acompañado de un breve explicación de los datos presentados.</p>
+<ol type="1">
+<li>¿Los congresistas del período 2016-2021 cuentan con experiencia política previa?</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_variable</span>(SintesisPuestoNacional)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="02-diego_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>El primer gráfico muestra que la mayor parte de los congresistas elegidos para el período 2016-2021 no cuentan con experiencia política previa a nivel nacional. El 56% no ha ocupado ningún cargo público electo a nivel nacional o siquiera ha candidateado a un cargo de este tipo. Por su parte,el 17.7% llegó a candidatear a algún cargo a nivel nacional sin llegar a ser electos mientras que el 26.2% llegó candidatear y consiguió ser electo.</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_variable</span>(SintesisPuestoSubNac)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="02-diego_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>El segundo gráfico muestra que el porcentaje de congresistas que cuenta con experiencia política a nivel subnacional es ligeramente superior con respecto al nivel nacional. El 47.7% de los congresistas electos para el período 2016 no ha ocupado ningún cargo público electo a nivel subnacional o siquiera ha candidateado a un cargo de este tipo. Por su parte, el 25.4% llegó a candidatear a algún cargo a nivel nacional sin llegar a ser electos mientras que el 26.9% llegó candidatear y consiguió ser electo.</p>
+<ol start="2" type="1">
+<li>¿Qué nivel nivel educativo cuentan?</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_variable</span>(NivelEducSintesis)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="02-diego_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>El tercer gráfico muestra que, contrariamente a lo que se piensa, los congresistas del país cuentan con un elevado nivel educativo o, al menos, superior a la media nacional. Tan solo el 10.8% de los congresistas electos para el período 2016-2021 no cuenta con estudios superiores o con estudios superiores no unversitarios. Por su parte, cerca del 40% de los congresistas cuenta con estudios de pregrado (completos o incompletos), casi otro 40% cuenta con estudios de maestría y un sorprendente 9% cuenta con estudios de doctorado.</p>
+<ol start="3" type="1">
+<li>¿En qué tipo de universidades han estudiado los congresistas?</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_variable</span>(UnivPregSintsis)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="02-diego_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>El cuarto gráfico revela que la gran mayoría (cerca del 40%) de los congresistas electos para el período 2016-2021 estudió en una universidad de Lima. El 33.1% estudió en una universidad privada de Lima mientras que el restante 10.8% lo hizo en una universidad pública de la capital. Por su parte, el 28.5% de los congresistas estudió en una universidad pública fuera de Lima y el restante 10.8% en universidad privada también fuera de la capital. Finalmente, un significativo 4.6% de congresistas estudió su carrera de pregrado en una universidad del extranjero.</p>
+<ol start="4" type="1">
+<li>¿Qué carreras han estudiado los congresistas?</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_variable</span>(CarreraSintesis)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="02-diego_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>El quinto gráfico revela que las carreras más estudiadas por los congresistas electos para el período 2016-2021 son leyes, administración, ingeniría y economía. Cerca de la tercera parte de los congresistas cuenta con estudios de derecho, seguido por un 11.5% de congresistas que han optado por la carrera de administración y otro 11.5% que optó por la carrera de ingeniería. Por su parte, un 9.2% optó por la carrera de economía.</p>
+<ol start="5" type="1">
+<li>¿En qué sectores se han desempeñado laboralmente?</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_variable</span>(ActivSintesis...<span class="dv">29</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="02-diego_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>El sexto gráfico revela que el ámbito del sector privado en el que se han desempeñado laboralmente los congresistas electos para el período 2016-2021 es bastante diversificado. Destaca en ese sentido que cerca de una quinta parte (20.8%) de los y las congresistas se han desempeñado como profesionales independientes. Dentro de ese grupo el 13.1% se ha desempeñado como abogados y otro 7.7% en otro tipo de profesiones (ingenieros, contadores, etc.). Otro 10.8% se ha desempeñado en diversos cargos dentro de Organizaciones No Gubernamentales mientras que el 9.2% en diversos cargos dentro de diverso tipo de empresas de transporte y logística.</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_variable</span>(SectorPublicoSintesis)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="02-diego_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>El sétimo gráfico revela que la mayor parte de los congresistas electos para el período 2016-2021 no cuenta con experiencia previa dentro del Estado. El 54.6% de los y las congresistas no cuenta con ninguna experiencia laboral de este tipo. Por su parte, dentro del grupo de congresistas que sí cuenta con experiencia de este tipo, la mayor parte se ha desempeñado en diverso tipo de cargos dentro de gobiernos regionales o municipales (23.8%).</p>
+<p>-¿En qué tipo de organizaciones han participado los congresistas?</p>
+<div class="cell">
+<details>
+<summary>Mostrar código</summary>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">graficar_variable</span>(OtraOrgaSintesis)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="02-diego_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>El octavo gráfico revela que la enorme mayoría de los congresistas electos para el período 2016-2021 no cuenta con experiencia previa en organizaciones de la sociedad civil. El 66.9% de los congresistas no declara haber formado parte de ninguna organización de este tipo. Dentro del grupo de congresistas que sí cuenta con experiencia en alguna organización, el 8.5% declara haber pertenecido a alguna organización de carácter profesional (colegio de abogados, colegio de ingenieros) y el 7.7% a algún tipo de gremio empresarial.</p>
+</section>
+<section id="conclusiones" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="conclusiones"><span class="header-section-number">2.6</span> Conclusiones</h2>
+<p>El presente trabajo nos ha permitido identificar algunas de las características de la trayectoria laboral de los congresistas electos para el período 2016-2021. En ese sentido, los datos muestran que una mayoritaria parte de estos funcionarios no cuentan con experiencia política en cargos electos a nivel nacional o subnacional. Los datos también revelan que estos actores tampoco cuentan en su mayoría con alguna experiencia laboral dentro del Estado, ya sea a nivel nacional o subnacional, o dentro de alguna organización social.Estos datos pueden darnos alcances para entender el bajo desempeño que ha presentado el Congreso en el cumplimiento de sus funciones.</p>
+<p>Por otro lado, otro dato relevante es que, contrariamente a lo que se piensa, los congresistas del país cuentan con un elevado nivel educativo o, al menos, superior a la media nacional. Tan solo el 10.8% de los congresistas electos para el período 2016-2021 no cuenta con estudios superiores o con estudios superiores no unversitarios.Esto ofrece indicios para cuestionar el sentido común extendido en gran parte de la ciudadanía que parte de los problemas del Congreso se deben al bajo nivel educativo de nuestros representantes.</p>
+
+
+
+</section>
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./01-kevin.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">La evolución en la identificación de la Tuberculosis en el Perú</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03-laila.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Nacimientos en mujeres madres menores de 19 años en pandemia</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+</body></html>

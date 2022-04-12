@@ -1,0 +1,26 @@
+# Presentación {.unnumbered}
+
+Entre febrero y marzo de 2022 tuve la oportunidad de dictar el taller de Elaboración de productos de datos: Automatización, teniendo como público objetivo a estudiantes o egresados de carreras de ciencias sociales, periodismo o educación con interés en aprender herramientas de análisis y visualización de datos. El contenido de los talleres buscó ser apropiado para personas sin experiencia con ningún lenguaje de programación. Los talleres se dictaron en modalidad virtual dos veces por semana con una duración de 10 sesiones de tres horas.
+
+A través del desarrollo de sesiones que combinaron teoría y práctica, se esperaba que los participantes adquieran las siguientes habilidades:
+
+- Elaboración de reportes de análisis de datos usando R Markdown con un nivel básico de automatización
+- Análisis de datos textuales, categóricos y temporales usando R a través de RStudio
+
+Con el transcurso de las sesiones, se hizo evidente que era necesario centrarse netamente en el primer objetivo. Esto no es culpa de los participantes del taller sino mía, debido a que el contenido programado se "saltó" cuestiones básicas acerca del uso de R y ciertas funciones que eran necesarias para los temas más avanzados.
+
+Sin perjuicio de ello, el presente trabajo ha sido una oportunidad para que los participantes del taller refuercen sus conocimientos y pongan a prueba sus habilidades. Las presentaciones con las que se dictaron los talleres, en su versión casi final, pueden ser encontradas en el perfil de Rpubs.com del usuario talleresdedatos. También es posible acceder al repositorio en Github de este libro digital.
+
+A quien lea esta compilación le hago recordar que los trabajos son realizados por personas que están en proceso de afianzar sus habilidades escribiendo código en R y tienen la finalidad de servir como práctica para ello. Los trabajos no están diseñados para pasar por una revisión académica rigurosa ni están orientados a ser una contribución sustancial a la ciencia. 
+
+Si alguna persona estuviese interesada en participar de algún taller o de practicar sus habilidades con R en la elaboración de algún reporte de datos como los que se encuentran en este libro digital, pueden contactarme por cualquiera de los medios indicados en el siguiente enlace -> Contacto.
+
+## Advertencia {.unnumbered}
+
+En esta ocasión, tuve una participación más directa orientando a los autores con ideas y, en casos muy específicos, con secciones de código necesario para plasmar sus ideas propias. La elección de los conjuntos de datos, paquetes, preguntas de investigación, gráficos y redacción en general quedó en manos de cada autor. En la edición de cada artículo, no se realizó una exhaustiva revisión de ortografía o gramática, ya que esto escapa de los objetivos del taller (y es responsabilidad de cada persona cuidar lo que presenta en público).
+
+## Agradecimiento {.unnumbered}
+
+Ha sido para mi un gran honor ver nacer trabajos muy interesantes y las conversaciones que tuve con cada participante mientras intentábamos darle forma a los temas de investigación fueron muy enriquecedoras. Me siento muy afortunado de haber acompañado este proceso y, aunque nuestros horarios no siempre coincidían, agradezco el esfuerzo puesto en lograr completar esta tarea.
+
+También quiero hacer un agradecimiento especial a Jennifer Ponce, quien ha participado en ediciones anteriores de este trabajo y muy amablemente nos permitió contar con un mejor entorno virtual para las sesiones.

@@ -1,0 +1,150 @@
+
+```{r setup, include=FALSE}
+source("pre-render.R")
+```
+
+# Nacimientos en mujeres madres menores de 19 años en pandemia
+
+*Laila Villavicencio*
+
+## Introducción
+
+Ante el contexto de la pandemia de la COVID-19 los estados priorizaron sus recursos en tratar esta pandemia de índole desconocida. Tal es así que el aislamiento fue la primera medida decretada por la mayoría de los países y el Perú no fue la excepción. Cuando el 16 de marzo  entró en vigencia el estado de emergencia y el aislamiento social obligatorio, centro y postas de salud suspendieron las consultas externas. 
+Entre las diferentes consecuencias que generó dicha suspensión la provisión de insumos de planificación familiar fue una de ellas. Además de otros insumos y servicios de salud sexual y reproductiva, incluidos aquellos relacionados con la salud menstrual. El grado de afectación de la cadena de suministros de estos servicios ha sido diferenciado por factores económicos, sociales, cultura y de género.
+
+
+Ante esta realidad frente a la pandemia surge la Directiva Sanitaria N° 094 -  Directiva sanitaria para garantizar la salud de las gestantes y la continuidad de la atención en planificación familiar ante la infección por COVID-19. La misma que tenía como finalidad establecer las disposiciones para realizar las actividades de atención de la salud materna relacionadas con las prestaciones que contribuyen a la prevención, reducción y manejo de los casos de gestantes y puérperas sospechosas o infectadas por el COVID-19 y para mantener la continuidad de la provisión de métodos anticonceptivos a la población que lo requiera. La directiva generó algunas disposiciones en ese contexto. Algunas de ellas: 
+1.	Garantizar continuidad de los servicios de salud y el suministro ininterrumpido de los insumos de salud sexual y reproductiva, incluyendo los métodos anticonceptivos para el ejercicios de los derechos sexuales y reproductivos.
+
+2.	Todos los establecimientos de salud deben garantizar la Protección a las mujeres gestantes de los riesgos vinculados a la propagación del COVID-9. Incluyendo la provisión de visitas domiciliares, parto y puerperio con énfasis en gestantes de alto riesgo y en especial con enfermedades respiratorias.
+
+3.	Se debe ofertar todos los métodos anticonceptivos en lo servicios de urgencia y emergencia de todos los establecimientos de salud a fin de garantizar la continuidad de los mismos y la atención  de la prevención del embarazo no deseado mediante la entrega de AOE. 
+
+4.	Todos los establecimientos de salud deben asegurar la debida disponibilidad de todos los métodos anticonceptivos.
+
+Sin embargo la realidad fue distinta y la defensoría del pueblo a través de sus notas de prensa N°459/0CII/DP/2020 expresaba su preocupación por la mala praxis en los centros de salud vinculada a víctimas de violencia sexual a menores de edad. De igual manera, algunos medios independientes como Wayka en los meses de mayo, junio del 2020 daban cuentan de adolescentes fallecidas por no ser atendidas en centros de salud o la falta de cobertura de madres embarazadas en los centros médicos. 
+
+Otro aspecto que se desarrolló en durante el aislamiento obligario fue que entre enero a diciembre del 2020 a través de los Centro de Emergencia Mujer  se registraron 131 casos de víctimas de feminicidio y 330 casos de tentativa de feminicidios.
+
+En la Comisión de la Mujer y Familia del Congreso de la República en su sesión del  12 de mayo del 2020 el Ministerio de Mujer reportaron 171 casos de violen cia sexual contra niñas, niños y adolescentes menos de 18 años. 
+
+En ese sentido, la finalidad de este trabajo busca identificar por años la cantidad de nacimientos producidos por mujeres menores de 19 años y ver así si ha disminuido o aumentado. Para ello se está teniendo en cuenta los años del 2016 al 2021 y como fuente principal el Sistema de Registro de Certificado de Nacido Vivo en Línea, del Ministerio de Salud el cual es un sistema web que involucra a dis grandes instituciones: El MINSA y el Registro Nacional de Identiad y Estado Civil - RENIEC
+
+## Paquetes usados
+
+el conjunto de paquetes usados es la instalación de library 
+(tidyverse)  lo cual nos permite construir gráficos estadísticos que pueden ser creados por la función ggplot. También se uso el parque readxl que permite leer y manejar data en formato xls
+
+
+```{r}
+library(tidyverse)
+library(readxl)
+```
+
+
+## Conjuntos de datos usados
+
+Para la construción de los gráficos estadisticos se ha creado la siguiente función para obtener grafícos de barras. La finalidad de estas gráficas permiten ordenar de manera resuminda la data por años y por grupos etáreos. Los años abarcan del 2016 al 2021 y los grupos estáreos son: datos_general que abarca los nacimientos por madres de 0a 19 años de edad, el primer grupo etáreo es de nacimientos por niñas de 0 a 10 años bajo la codificación: datos_0_10, el segundo grupo etáreo es de 11 a 14 años con el código datos_11_14 y el último grupo etáreo es de 15 a 19 años con la codificación de datos_15_19. Es así que el conjunto de datos permite ordenar los años y los grupos etáreos vinculados a los nacimientos ocurridos del 2016 al 2021 por mujeres entre 0 a 19 años. La fuente principal  data obtenida del Sistema de Certificado de Nacido vivo del Ministerio de Salud. 
+
+```{r}
+importar_datos <- function(hoja) {
+  read_excel("data/DatosMadre- General.xls", sheet = hoja, skip = 2) %>% 
+    rename(region = 1) %>% 
+    select(!starts_with("..."), !matches("Grand Total")) %>% 
+    pivot_longer(`2021`:`2016`, names_to = "anio", values_to = "casos") %>% 
+    # filter(region == "Grand Total")
+    filter(str_detect(str_to_upper(region), "TOTAL"))
+}
+```
+
+```{r}
+read_excel("data/DatosMadre- General.xls", sheet = 1, skip = 2) %>% 
+    rename(region = 1) %>% 
+    select(!starts_with("..."), -`Grand Total`) %>% 
+    pivot_longer(`2021`:`2016`, names_to = "anio", values_to = "casos") %>% 
+    filter(str_detect(str_to_upper(region), "TOTAL"))
+```
+
+
+
+```{r}
+datos_general <- importar_datos(hoja = 1)
+datos_0_10 <- importar_datos(hoja = 2)
+datos_11_14 <- importar_datos(hoja = 3)
+datos_15_19 <- importar_datos(hoja = 4)
+```
+
+## Funciones creadas
+
+La función creada para responder ¿cuántos nacimientos se han producido por mujeres menores de edad durante los años 2016 al 2021? 
+ se ha utilizado ggplot y aes como atributos estétitcos para la creación de la figura geométrica relacionado a la forma y tamaño de las barras a nuestra data. 
+ 
+ l
+```{r}
+graficar_nacimientos <- function(datos) { 
+  datos %>% 
+  ggplot(aes(anio, casos)) +
+  geom_col() +
+  geom_label(aes(label = casos))
+}
+```
+
+## Resultados
+
+
+Ante la pregunta sobre ¿Cómo ha sido la evolución de los nacimientos reportados por mujeres de 0 a 19 años según el Sistema de Registro de Certificado de Nacido Vivo en Línea?
+se uso el bloque de código:
+
+```{r}
+graficar_nacimientos(datos = datos_general)
+```
+
+
+En el presente gráfico abarca la totalidad de nacimientos ocurridos desde el 2016 al 2021 por parte de mujeres menores de 0 a 19 años. En el cual se evidencia una ligera dismunición en el año 2020 donde la restricciones vinculados a la pandemia del covid 19 fueron más estrictas. En ese sentido en el 2016 las mujeres menores de  0 a 19 años produjeron un total de 56813 nacimientos ese año y desde entonces el crecimiento no es lineal, al contro es ambivalente. En el 2019 los nacimiento fueron 53308 el último año previo a la pandemia. Sin embargo en el 2020 los nacimientos fueron 48578 y para el 2021 hay un aumento de 954 nacimiento respectivamente. Esto nos lleva a la hipótesis sobre la ligera disminución de nacimientos en el 2020 y es propiamente los decesos por covid a nivel nacional.  
+
+Ante la pregunta ¿Cómo ha sido la evolución de los nacimientos reportados por mujeres de 0 a 10 años según el Sistema de Registro de Certificado de Nacido Vivo en Línea?  el bloque de código fue:
+
+```{r}
+graficar_nacimientos(datos = datos_0_10)
+```
+
+
+En el gráfico que se presenta registra los nacimiento de niñas de 0 a 10 años de edad desde el 2016 hasta el  2021. En comparación con el gráfico general el año 2020 donde las restricciónes respecto a la pandemia son más estricticas se ve un incremento muy significado en años anteriores. Es así que el año 2020 se han producido 22 nacimientos por niñas prtenecientes al grupo etareo de 0 a 10 años y es el número más alto en comparación con el 2016 con 4 nacimientos, 2017 y 2028 5 nacimiento y en tan solo un año de diferencia entre el 2019 y 2020 fueron 13 nacimientos producidos por niñas de 0 a 10 años. 
+
+
+
+Ante la pregunta de ¿Cómo ha sido la evolución de los nacimientos reportados por mujeres de 11 a 14 años según el Sistema de Registro de Certificado de Nacido Vivo en Línea? se utilizó el siguiente bloque de código:
+
+```{r}
+graficar_nacimientos(datos = datos_11_14)
+```
+
+
+El gráfico representa a los nacimientos producidos por madres del grupo etareo de 11 a 14 años. En ese sentido la evolución demuestra que en pese a una ligera dismunición entre el 2019 y 2020 de 139 nacimientos menos para el 2021 la cifra de nacimientos de incrementa en 274 nacimientos, cifra que es incluso mayor a los años 2016, 2017 y 2018 donde la totalidad de nacimientos fue de 1412 y para el 2021 la cifra total es de 1429. 
+
+
+
+
+Finalmente ante la pregunta de ¿Cómo ha sido la evolución de los nacimientos reportados por mujeres de 15 a 19 años según el Sistema de Registro de Certificado de Nacido Vivo en Línea? el bloque de códigos fue:
+
+```{r}
+ graficar_nacimientos(datos = datos_15_19)
+```
+En este gráfico se representa el grupo de estario de mujeres de 15 a 19 años de edad. A través de él la línea de crecimiento es desproporcional se puede evidenciar que en el 2016 los nacimientos fueron de un total de de 55636 el mismo que para el 2017 aumento en 1886 nacimientos y para el 2018 dismunución en comparación al 2017 en 1303. Sin embargo en el último año de no pandemía el total de nacimientos fue 52005 y éste tuvo una dismunción en el 2020 de 47401. Sin embargo, para el 2021 la cifra total empieza a incrementarse. 
+
+
+
+
+## Conclusiones
+
+
+A raíz de todo lo desarrollado y encontrado se concluye en lo siguiente:
+- Los nacimientos producidos por mujeres entre 0 a 19 años presenta un ligero decrecimiento en el 2020. Sin embargo en el 2021 se evidencia que la cifra comienza a incrementarse. Además desde el 2016 al 2021 la totalidad de los nacimientos ocurridos no arroja un dato constante al contrario es muy fluctuante. 
+
+- Respecto a los nacimientos ocurridos por mujeres del grupo etáreo de 0 a 10 años es sumamente preocupante, puesto que desde desde el 2016 al 2021 el mayor incremento de nacimientos se produce en el 2020. La vinculación con los grupos etáreos de niñas de 11 a 14 años y de 15 a 19 demuestra una problematica social y políticas. Asu vez un problema de salud pública puuestpo que al ser menos de edad los embarazos y por ende los nacimientos no se producen en el marco del interés superior del niño principio rector de la Convención Sobre los Derechos del Niño (1989). En la misma línea, 
+en el resumen ejecutivo de la campaña Son niñas no madres (Mayo, 2021) demuestra que las tasas de embarazos adolescentes son alarmantes y mucho más los partos en niñas y adolescentes. 
+
+- Las consecuencias de embarazos en niñas y adolescentes de acuerdo a PROMSEX (2020) van desde la muerte materna, impactos en la salud, abandono escoclar y perpetuación de la pobreza. 
+
+Finalmente los nacimientos ocurridos durante el 2016 al 2021 en mujeres menores de edad se infiere que son producto de violaciones sexuales y la no aplicación del Protocolo de acción conjunta entre los Centros de Emergencia Mujer y los Establecimientos de Salud. 
+
