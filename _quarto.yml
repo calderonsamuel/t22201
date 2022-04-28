@@ -16,7 +16,7 @@ book:
     - "02-diego.qmd"
     - "03-laila.qmd"
     - "04-leanna.qmd"
-    - references.qmd
+    # - references.qmd
   search: true
   sharing: [twitter, facebook]
 
